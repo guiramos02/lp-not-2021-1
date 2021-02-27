@@ -7,12 +7,15 @@
     <script>
         'use strict'
 
-        let numero = parseInt(prompt('Informe um número qualquer:'))
-
-        if (numero%2 == 0) {
+        let numero = parseInt(prompt('Informe um número inteiro qualquer:'))
+        // Testando se realmente é um numero
+        if(isNaN(numero)){ //Conversao do parseInt falhou
+            alert('O valor informado não é um número inteiro válido.')
+        }
+        else if (numero % 2 === 0) {
             alert('Seu número escolhido é par')
         }
-        else if (numero%2 == 1) {
+        else {
             alert('Seu número escolhido é impar')
         }
     </script>
