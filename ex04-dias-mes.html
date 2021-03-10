@@ -22,7 +22,30 @@
             * ABRIL, JUNHO, SETEMBRO e NOVEMBRO: 30 dias
             * FEVEREIRO: 28 ou 29 dias (em anos bissextos)
         */
-
+        let mes = parseInt(prompt('Informe um número correspondente a um mês,na faixa entre 1 e 12:'))
+        switch(mes){
+            case 1 :
+            case 3 :
+            case 5 :
+            case 7 :
+            case 8 :
+            case 10:
+            case 12:
+                document.write('Esse mês tem 31 dias!')
+                    break
+            case 4:
+            case 6:
+            case 9:
+            case 11: 
+                document.write('Esse mês tem 30 dias!')
+                    break
+            case 2 :
+                document.write('Esse mês tem 28 ou 29 dias!')
+                    break
+            default :
+                document.write('Digite um número válido!')
+            
+        }
     </script>
 </head>
 <body>
