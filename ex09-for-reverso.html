@@ -21,7 +21,20 @@
             5! = 5 * 4 * 3 * 2 * 1
             7! = 7 * 6 * 5 * 4 * 3 * 2 * 1         
         */
+        
+        let fat 
+        let resultado = 1
 
+        do{
+         fat = parseInt(prompt('Digite um número inteiro que seja maior do que 1: '))
+        }while (isNaN( fat ) || fat <= 1)
+
+        for (let i = fat; i > 1; i--) {
+        resultado = resultado * i
+        }
+        
+        document.write(`O resultado da fatoração do número ${fat} é ${resultado}.`)
+        
     </script>
 </head>
 <body>
