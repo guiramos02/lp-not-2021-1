@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1>Document Object Model(DOM)</h1>
+
+    <p>O <em>Document Object Model</em> (Modelo de Objetos do Documento) é a 
+        estrutura da página HTML tal como vista pelo JavaScript. </p>
+
+    <ul>
+        <li id = 'it1'>Item 1</li>
+        <li id = 'it2'>Item 2</li>
+        <li id = 'it3'>Item 3</li>
+    </ul>
+        <script>
+        /*
+            Quando vamos manipular o DOM(os elementos da pagina HTML) via Js, a seção
+            <script> precisa ser realocada para logo antes da tag <body>.
+        */
+        // Ativa verificações adicionais de variáveis
+        // Módulo "chato" do JavaScript
+        'use strict'
+
+        /* Mudar o texto do elemento H1 
+        1) Caputar o elemento HTML
+        */
+       const elementoH1 = document.querySelector('h1')
+       elementoH1.textContent = 'Novo título da página'
+
+       // Mudar algumas características do parágrafo <p>
+        const elementoP = document.querySelector('p')
+        elementoP.style.textAlign = 'center'
+        elementoP.style.fontWeight = 'bold'
+
+        // Mudar a característica de um <li>
+        const elementoLi = document.querySelector('li')
+        elementoLi.style.backgroundColor = 'yellow'
+        elementoLi.style.fontStyle = 'italic'
+        
+        // document.querySelector('nometag') irá capturar sempre o PRIMEIRO
+        //elemento do tipo 'nometag'
+
+        // Capturando todos os elementos <li>
+
+        /* document.querySelectorAll('nometag') irá capturar TODOS os elementos
+        do tipo 'nometag' e coloca-los dentro de um vetor. O primeiro elemento
+        do vetor tem indice 0
+        */
+        //const todosLi = document.querySelectorAll('li')
+        //todosLi[0].style.color = 'red'
+        //todosLi[1].style.color = 'green'
+        //todosLi[2].style.color = 'orange'
+
+        /* Capturando um elemento por id. Existem duas formas */
+        // Forma 1 ( mais antiga )
+        const itemItem1 = document.getElementByyId('it1')
+        itemItem1.style.color = 'royalblue'
+
+        // Forma 2 (mais recente)
+
+        // IMPORTANTE! Ao usar document.querySelector('') para capturar POR ID,
+        // este deve ser passado com uma # no inicio
+        const itemItem2 = document.querySelector('#it2')
+        itemItem2.style.color = 'seagreen'
+
+
+        
+
+    </script>
+</body>
+</html>
