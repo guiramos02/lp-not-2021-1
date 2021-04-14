@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 1</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        function km(){
+            for(let i = 400 ; i > 1; i--){
+            if (i % 50 === 0) {
+                document.write(`No km ${i} há uma estação de embarque / desembarque.<br>`)
+            }
+        }
+        }
+       let kmrodovia
+
+        do{
+            kmrodovia = parseInt(prompt('Informe o KM da rodovia (>400)'))
+        }while(isNaN(kmrodovia) || kmrodovia <= 1 && kmrodovia >= 400)
+        
+        switch(kmrodovia){
+        case '98' :
+        case '190':
+        case '283':
+        case '379':
+            alert('Há um posto de conveniência da rede Mil Grau.')
+            break
+        case '155':
+        case '355':
+            alert('Há um posto da Policia Ferroviária.')
+            break
+        case '137':
+            alert('Há um aeroporto interplanetário de Virapratos.')
+            break
+        case '204':
+            alert('Há um hotel Cacique internacional 6 estrelas.')
+            break
+        case '311':
+            alert('Há um  Boleli shopping center.')
+            break
+        case '356':
+            alert('Há um acesso ao Acqua Park Unidade |||')
+            break
+        default:
+            alert('Nada aqui.')
+       }
+        km()
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
