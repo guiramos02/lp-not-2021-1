@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página modelo</title>
+    <script>
+        // Ativa verificações adicionais de variáveis
+        // Módulo "chato" do JavaScript
+        'use strict'
+
+        // VETORES
+        // Vetores permitem armazenara vários valores em uma única variável.
+        // Nos vetores, os valores são armazenados em uma sequencia numerada
+        // de posições, sendo que a PRIMEIRA POSIÇÃO é a de NÚMERO 0
+
+        // Criando um vetor vazio
+        // Em JS, não se determina um tamanho máximo de elementos
+        // no momento de criação do vetor.
+        let vazio1 = [] // Forma mais recente
+        let vazio2 = Array() // Forma tradicional
+
+        // Criando vetores já com elementos
+        // É possivel colocar qualquer tipo de dados valido dentro de um vetor
+        let frutas1 = ['banana','maça','uva','pera'] // Forma mais recente
+        let numeros = Array(22,13,2,34,42,49) // Forma tradicional
+
+        // Um mesmo vetor pode receber varios tipos de dados
+        let mix = [-15,'João', false , null, undefined]
+
+        // Acessando os valores dos elementos de um vetor
+        document.write(frutas1[0]+ '<br>') // Primeiro elemento do vetor frutas1
+
+        // Acessando o quarto elemento do vetor numeros
+        document.write(numeros[3]+ '<br>')
+
+        // Verificando a quantidade de elementos de um vetor : LENGTH
+        document.write('Quantidade de elementos do vetor frutas:')
+        document.write(frutas1.length+ '<br>')
+        document.write('Quantidade de elementos do vetor numeros:')
+        document.write(numeros.length+ '<br>')
+
+        // Ultimo elemento do vetor frutas
+        document.write(numeros[numeros.length - 1] + '<br>')
+
+        // Alterando o primeiro elemento do vetor frutas
+        frutas1[0] = 'jabuticaba'
+        document.write(frutas1[0] + '<br>')
+
+        // Alterando o terceiro elemento do vetor numeros
+        numeros[2] = 33
+        document.write(numeros[2] + '<br>')
+        document.write('Vetor numeros: ' + numeros + '<br>')
+
+        // Inserindo um novo elemento no final do vetor : push()
+        let carros = [] // Vetor vazio
+        document.write('Vetor carros antes: ' + carros + '<br>')
+        // Inserindo um novo valor no final do vetor carros
+        carros.push('Maverick')
+        document.write('Vetor carros depois: ' + carros + '<br>')
+        carros.push('Opala')
+        document.write('Vetor carros depois: ' + carros + '<br>')
+        carros.push('Fusca')
+        document.write('Vetor carros depois: ' + carros + '<br>')
+
+        frutas1.push('melancia')
+        document.write('Vetor frutas depois : ' + frutas1 + '<br>')
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

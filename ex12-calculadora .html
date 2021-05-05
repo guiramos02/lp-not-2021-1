@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora DOM</title>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <div>
+       <label for="num1">Primeiro número</label>
+       <input id="num1" type="number">
+    </div>
+
+    <div>
+        <label for="oper">Operação  </label>
+        <select id="oper">
+            <option>(Selecione)</option>
+            <option>Soma (+)</option>
+            <option>Subtração (-)</option>
+            <option>Multiplicação (*)</option>
+            <option>Divisão (/)</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="num2">Segundo número</label>
+        <input id="num2" type="number">
+    </div>
+
+    <div>
+        <button id="calcular">Calcular</button>
+    </div>
+
+    <div id="resultado"></div>
+
+
+       <script>
+        // Ativa verificações adicionais de variáveis
+        // Módulo "chato" do JavaScript
+        'use strict'
+
+        // 1) Capturar os elementos em HTML
+        const elNum1 = document.querySelector('#num1')
+        const elOper = document.querySelector('#oper')
+        const elNum2 = document.querySelector('#num2')
+        const elCalcular = document.querySelector('#calcular')
+        const elResultado = document.querySelector('resultado')
+
+        // Variaveis que conterão os valores a serem processados
+        let num1, num2
+        // 2) Declarar a função de validação do formulário
+        function validar(){
+            //Retorna true caso todos os campos do formulario tiverem
+            //sido preenchidos corretamente, ou false,caso contrário.
+            if(ElOper.selectedIndex === 0){
+                alert('Selecione uma operação.')
+                elOper.focus()
+                return false
+            }
+            num1 = parseFloat(elNum1.value)
+            if(isNaN(num1)){
+                alert('Informe um número válido')
+                elNum1.focus()  
+                return false
+            }
+            num2 = parseFloat(elNum2.value)
+            if(isNaN(num2)){
+                alert('Informe um número válido')
+                elNum2.focus()
+                return false
+            }
+            return true
+        }
+        // 3) Declarar a função que faz o calculo, de acordo com a operação escolhida pelo usuário.
+        // Dentro desta função, deve ser chamada a função de validação.
+        function exibirResultado(){
+        if(validar()){
+            let operacao
+            switch(elOper.selectedIndex){
+                case 1: // +
+                operacao = num1 + num2
+                break
+                case 2: // -
+                operacao = num1 - num2
+                break
+                case 3: // *
+                operacao = num1 * num2
+                break
+                case 4: // :
+                operacao = num1 / num2
+                break
+            }
+            elResultado.textContent = operacao
+        }
+     }
+
+        // 4) Associar a função que faz o cálculo ao evento 'click' do botão.
+                elCalcular.addEventListener('click', exibirResultado)
+
+    </script> 
+</body>
+</html>
