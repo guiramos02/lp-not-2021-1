@@ -57,8 +57,43 @@
                 Faça um loop FOR...OF para exibir as estações e depois
                 passe um traço horizontal (<hr>).            
         */
-     
-       
+        let metro = []
+        metro.push('Santa Terezinha')
+        metro.push('Estação')
+        metro.push('Centro')
+        metro.push('Jardim Lima')
+        metro.push('Aeroporto I')
+        for(let i=0; i < metro.length ; i++){
+            document.write(metro[i] + '<br>')
+        }
+        document.write('<hr>')
+
+        metro.unshift('City Petrópolis')
+        metro.push('Aeroporto IV')
+        for(let elemento of metro){
+            document.write(elemento + '<br>')
+        }
+        document.write('<hr>')
+
+        metro.splice(2,0,'Vila Imperador')
+        metro.splice(6,0,'Jardim Alvorada')
+        for(let i = metro.length -1; i>=0; i--){
+            document.write(metro[i] + '<br>')
+        }
+        document.write('<hr>')
+
+        metro.splice(4,2,'9 de Julho', 'Champagnat')
+        for(let i = 0; i < metro.length  ; i++)
+        document.write(metro[i] + '<br>')
+        document.write('<hr>')
+
+        metro.splice(8,1)
+        metro.splice(length -1,1)
+        metro.splice(1,1)
+        for(let elemento of metro){
+            document.write(elemento + '<br>')
+        }
+        document.write('<hr>')
     </script>
 </head>
 <body>
