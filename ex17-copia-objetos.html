@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página modelo</title>
+    <script>
+        // Ativa verificações adicionais de variáveis
+        // Módulo "chato" do JavaScript
+        'use strict'
+        /*
+
+        1) Declare um objeto pet1 que represente um cão e preencha as seguintes propriedades:
+        - nome
+        - raça
+        - cor
+        - sexo
+        - nome do pai (nome da propriedade com espaços)
+        - nome da mae (nome da propriedade com espaços)
+
+        */
+        const objPet1 = {}
+        objPet1.nome = 'Thor'
+        objPet1['raça'] = 'Pitbull'
+        objPet1.cor = 'Preto'
+        objPet1.sexo = 'M'
+        objPet1['nome do pai'] = 'Thoru'
+        objPet1['nome da mae'] = ' Jully'
+
+        /* 
+        2) Crie um objeto pet2, copiando do primeiro:
+        let pet2 = pet1
+        E troque algumas das caracteristicas de pet2
+        */
+
+        // let pet2 = pet1 // Duplicar dessa forma não funciona
+        // Duplicar cada um das propriedades em um novo objeto
+        // Para isso, podemos usar a chamada 'sintae de espalhamento'
+        // Vai gerar uma cópia de cada uma das propriedades de pet1 em pet2
+
+        let objPet2 = {...objPet1}
+       objPet2.nome = 'Jessie'
+       objPet2.cor = 'Branco'
+       objPet2.sexo = 'F'
+
+       /* 
+       3) Use dois for...in para listas os objetos: pet1 e pet2
+       */
+
+        for(let prop in objPet1){
+            document.write(`${prop} => ${objPet1[prop]}<br>`)
+        }
+
+        document.write('<hr>')
+
+        for(let key in objPet2){
+            document.write(`${key} => ${objPet2[key]}<br>`)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
